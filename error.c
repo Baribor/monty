@@ -22,6 +22,7 @@ void print_error(void)
 void _print_opcode_error(unsigned int line, char *msg)
 {
 	fprintf(stderr, "L%d: %s\n", line, msg);
+	free_stack();
 	fclose(data.file);
 	exit(EXIT_FAILURE);
 }

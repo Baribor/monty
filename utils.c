@@ -57,6 +57,5 @@ void execute_opcode(void)
 		}
 	}
 
-	if (strcmp(data.opcode, "\n"))
-		print_error();
+	print_error();
 }
