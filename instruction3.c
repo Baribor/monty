@@ -72,3 +72,28 @@ void opcode_rotl(stack_t **stack, UNUSED unsigned int line)
 void opcode_nop(UNUSED stack_t **stack, UNUSED unsigned int line_number)
 {
 }
+
+/**
+ * opcode_rotr - Performs the rotr operation
+ * @stack: The program stack
+ * @line: Current execution line
+ * Return: void
+ */
+void opcode_rotr(stack_t **stack, UNUSED unsigned int line)
+{
+	stack_t *current = *stack, *temp;
+
+	if (!current)
+		return;
+
+	while (current->next)
+	{
+		temp = current->next;
+		current->next = current->prev;
+		current->prev = temp;
+		current = temp;
+	}
+	current->next = current->prev;
+	current->prev = NULL;
+	*stack = current;
+}

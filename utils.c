@@ -38,6 +38,7 @@ void execute_opcode(void)
 		{OPCODE_PCHAR, opcode_pchar},
 		{OPCODE_PSTR, opcode_pstr},
 		{OPCODE_ROTL, opcode_rotl},
+		{OPCODE_ROTR, opcode_rotr},
 		{OPCODE_NOP, opcode_nop},
 		{NULL, NULL}};
 	int i;

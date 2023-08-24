@@ -16,6 +16,7 @@
 #define OPCODE_PCHAR "pchar"
 #define OPCODE_PSTR "pstr"
 #define OPCODE_ROTL "rotl"
+#define OPCODE_ROTR "rotr"
 
 #define UNUSED __attribute__((unused))
 
