@@ -19,6 +19,6 @@ int main(int argc, char *argv[])
 	}
 
 	data.file_name = argv[1];
-
+	begin_interpret();
 	return (EXIT_SUCCESS);
 }
