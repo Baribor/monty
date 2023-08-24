@@ -37,16 +37,4 @@ typedef struct instruction_s
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-typedef struct interpreter_data
-{
-	int fd;
-	int currentLine;
-} iptr_data;
-
-/* Util functions */
-void init_data(iptr_data *data);
-
-/* Exec functions */
-void begin_interpret(iptr_data *data);
-
 #endif
