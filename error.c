@@ -6,7 +6,7 @@
  */
 void print_error(void)
 {
-	fprintf(stderr, "L%d: : unknown instruction %s\n",
+	fprintf(stderr, "L%d: unknown instruction %s\n",
 			data.current_line, data.opcode);
 	free_stack();
 	fclose(data.file);
