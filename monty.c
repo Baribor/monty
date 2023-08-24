@@ -1,12 +1,14 @@
 #include "monty.h"
 
+iptr_data data = {1, NULL, NULL, NULL, NULL, NULL, NULL};
+
 /**
  * main - The main program entry
  * @argc: The argument counter
  * @argv: The argument values
  * Return: Always 0
  */
-int main(int argc, char const *argv[])
+int main(int argc, char *argv[])
 {
 	(void)argv;
 
@@ -15,6 +17,8 @@ int main(int argc, char const *argv[])
 		fprintf(stderr, "USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
+
+	data.file_name = argv[1];
 
 	return (EXIT_SUCCESS);
 }
