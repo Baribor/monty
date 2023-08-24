@@ -19,8 +19,8 @@ void begin_interpret(void)
 	{
 		data.current_line++;
 		data.line = buf;
-		/* execute_opcode(); */
+		execute_opcode();
 	}
 	fclose(data.file);
-	/* free_stack(); */
+	free_stack();
 }

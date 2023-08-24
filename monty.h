@@ -73,7 +73,6 @@ void execute_opcode(void);
 stack_t *get_tail(stack_t **stack);
 
 void print_error(void);
-void _print_err(char *str);
 void free_stack(void);
 
 /* Executors */
