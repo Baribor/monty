@@ -1,6 +1,6 @@
 #include "monty.h"
 
-iptr_data data = {1, NULL, NULL, NULL, NULL, NULL, NULL};
+iptr_data data = {0, NULL, NULL, NULL, NULL, NULL, NULL};
 
 /**
  * main - The main program entry
