@@ -6,6 +6,7 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <fcntl.h>
+#include "macrons.h"
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -61,9 +62,6 @@ typedef struct interpreter_data
 extern iptr_data data;
 
 /* Util functions */
-char *_strdup(char *str);
-void reverse_string(char *str);
-void number_to_string(char *buf, int num);
 void _print_opcode_error(unsigned int line, char *msg);
 int is_int(char *str);
 
@@ -77,7 +75,7 @@ void free_stack(void);
 
 /* Executors */
 void opcode_push(stack_t **stack, unsigned int line_number);
-void opcode_pall(stack_t **stack, __attribute__((unused)) unsigned int line);
+void opcode_pall(stack_t **stack, UNUSED unsigned int line);
 void opcode_pint(stack_t **stack, unsigned int line_number);
 void opcode_pop(stack_t **stack, unsigned int line_number);
 void opcode_swap(stack_t **stack, unsigned int line_number);
@@ -87,7 +85,8 @@ void opcode_div(stack_t **stack, unsigned int line_number);
 void opcode_mul(stack_t **stack, unsigned int line_number);
 void opcode_mod(stack_t **stack, unsigned int line_number);
 void opcode_pchar(stack_t **stack, unsigned int line_number);
-void opcode_pstr(stack_t **stack, __attribute__((unused)) unsigned int line);
-void opcode_rotl(stack_t **stack, __attribute__((unused)) unsigned int line);
+void opcode_pstr(stack_t **stack, UNUSED unsigned int line);
+void opcode_rotl(stack_t **stack, unsigned int line);
+void opcode_nop(UNUSED stack_t **stack, UNUSED unsigned int line_number);
 
 #endif

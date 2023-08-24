@@ -25,7 +25,7 @@ void opcode_pchar(stack_t **stack, unsigned int line_number)
  * @line: Current execution line
  * Return: void
  */
-void opcode_pstr(stack_t **stack, __attribute__((unused)) unsigned int line)
+void opcode_pstr(stack_t **stack, UNUSED unsigned int line)
 {
 	stack_t *top = get_tail(stack);
 
@@ -49,7 +49,7 @@ void opcode_pstr(stack_t **stack, __attribute__((unused)) unsigned int line)
  * @line: Current execution line
  * Return: void
  */
-void opcode_rotl(stack_t **stack, __attribute__((unused)) unsigned int line)
+void opcode_rotl(stack_t **stack, UNUSED unsigned int line)
 {
 	stack_t *tail = get_tail(stack);
 
@@ -61,4 +61,14 @@ void opcode_rotl(stack_t **stack, __attribute__((unused)) unsigned int line)
 	tail->prev = NULL;
 	(*stack)->prev = tail;
 	*stack = tail;
+}
+
+/**
+ * opcode_nop - Performs the rotl operation
+ * @stack: The program stack
+ * @line_number: Current execution line
+ * Return: void
+ */
+void opcode_nop(UNUSED stack_t **stack, UNUSED unsigned int line_number)
+{
 }

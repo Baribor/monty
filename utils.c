@@ -25,24 +25,25 @@ int is_int(char *str)
 void execute_opcode(void)
 {
 	instruction_t execs[] = {
-		{"push", opcode_push},
-		{"pall", opcode_pall},
-		{"pint", opcode_pint},
-		{"pop", opcode_pop},
-		{"swap", opcode_swap},
-		{"add", opcode_add},
-		{"sub", opcode_sub},
-		{"div", opcode_div},
-		{"mul", opcode_mul},
-		{"mod", opcode_mod},
-		{"pchar", opcode_pchar},
-		{"pstr", opcode_pstr},
-		{"rotl", opcode_rotl},
+		{OPCODE_PUSH, opcode_push},
+		{OPCODE_PALL, opcode_pall},
+		{OPCODE_PINT, opcode_pint},
+		{OPCODE_POP, opcode_pop},
+		{OPCODE_SWAP, opcode_swap},
+		{OPCODE_ADD, opcode_add},
+		{OPCODE_SUB, opcode_sub},
+		{OPCODE_DIV, opcode_div},
+		{OPCODE_MUL, opcode_mul},
+		{OPCODE_MOD, opcode_mod},
+		{OPCODE_PCHAR, opcode_pchar},
+		{OPCODE_PSTR, opcode_pstr},
+		{OPCODE_ROTL, opcode_rotl},
+		{OPCODE_NOP, opcode_nop},
 		{NULL, NULL}};
 	int i;
 
 	data.opcode = strtok(data.line, " \n\t");
-	if (!data.opcode)
+	if (!data.opcode || data.opcode[0] == '#')
 		return;
 	data.arg = strtok(NULL, " \n\t");
 

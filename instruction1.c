@@ -42,7 +42,7 @@ void opcode_push(stack_t **stack, unsigned int line_number)
  * @line: Current execution line
  * Return: void
  */
-void opcode_pall(stack_t **stack, __attribute__((unused)) unsigned int line)
+void opcode_pall(stack_t **stack, unsigned int line __attribute__((unused)))
 {
 	stack_t *tail = get_tail(stack);
 
