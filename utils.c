@@ -30,6 +30,14 @@ void execute_opcode(void)
 		{"pint", opcode_pint},
 		{"pop", opcode_pop},
 		{"swap", opcode_swap},
+		{"add", opcode_add},
+		{"sub", opcode_sub},
+		{"div", opcode_div},
+		{"mul", opcode_mul},
+		{"mod", opcode_mod},
+		{"pchar", opcode_pchar},
+		{"pstr", opcode_pstr},
+		{"rotl", opcode_rotl},
 		{NULL, NULL}};
 	int i;
 
